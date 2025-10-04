@@ -1,8 +1,10 @@
+import { Button, ButtonSso } from "./Components/Elements/Button";
+import Input from "./Components/Elements/Input";
+import Label from "./Components/Elements/Label";
+import InputField from "./Components/Fragments/InputField";
 function App() {
   return (
-    <main
-      className="h-screen w-full bg-[url(/src/assets/image/bglogin.jpg)] bg-cover bg-no-repeat bg-center flex justify-center items-center font-lato text-white p-4"
-    >
+    <main className="h-screen w-full bg-[url(/src/assets/image/bglogin.jpg)] bg-cover bg-no-repeat bg-center flex justify-center items-center font-lato text-white p-4">
       {/* Kontainer form login */}
       <div className="w-full max-w-md bg-[#181A1CD6] flex flex-col rounded-2xl p-6 sm:p-8 space-y-6">
         {/* Header dengan Logo dan Judul */}
@@ -28,43 +30,21 @@ function App() {
         {/* Form Input */}
         <form action="#" className="flex flex-col space-y-4">
           {/* Input Username */}
-          <div className="flex flex-col gap-2">
-            <label htmlFor="username" className="text-sm text-gray-200">
-              Username
-            </label>
-            <input
-              id="username"
-              type="text"
-              placeholder="Masukan username"
-              className="w-full p-3 rounded-full border border-[#E7E3FC3B] bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
-            />
-          </div>
+          <InputField name="username" text="Username" type="text" placeholder="Masukan username"/>
 
           {/* Input Password */}
-          <div className="flex flex-col gap-2">
-            <label htmlFor="password" className="text-sm text-gray-200">
-              Password
-            </label>
-            <input
-              id="password"
-              type="password"
-              placeholder="Masukan password"
-              className="w-full p-3 rounded-full border border-[#E7E3FC3B] bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
-            />
-          </div>
+          <InputField name="username" text="Password" type="password" placeholder="Masukan password"/>
+          
 
           {/* Opsi Tambahan */}
           <div className="flex justify-between items-center text-sm gap-2 sm:gap-4 mt-2">
             <p className="text-[#C1C2C4]">
               Belum Punya Akun?{" "}
-              <a
-                href="#"
-                className="font-bold text-white hover:underline"
-              >
+              <a href="#" className="font-bold text-white hover:underline">
                 Daftar
               </a>
             </p>
-            <a href="#" className="hover:underline">
+            <a href="#" className="hover:underline ">
               Lupa kata sandi?
             </a>
           </div>
@@ -72,15 +52,11 @@ function App() {
 
         {/* Tombol Aksi */}
         <div className="flex flex-col gap-3">
-          <button className="py-3 rounded-full bg-[#E7E3FC3B] w-full hover:bg-opacity-80 transition-colors font-normal">
-            MASUK
-          </button>
+          <Button children="MASUK" background="bg-[#E7E3FC3B]" />
           <div className="flex items-center justify-center gap-2">
             <p className="text-center text-sm text-[#C1C2C4]">Atau</p>
           </div>
-          <button className="py-3 rounded-full bg-transparent border border-[#E7E3FC3B] w-full hover:bg-[#E7E3FC3B] hover:bg-opacity-20 transition-colors font-semibold flex items-center justify-center gap-2">
-            <img src="/src/assets/image/google.png" className="w-5 h-5" alt="" /><p className="font-normal">Masuk dengan Google</p>
-          </button>
+          <ButtonSso />
         </div>
       </div>
     </main>
