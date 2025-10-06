@@ -1,8 +1,8 @@
 const Button = (props) => {
-  const { btn } = props;
+  const { btn,clas } = props;
   return (
     <button
-      className={`py-3 rounded-full bg-[#E7E3FC3B] w-full hover:bg-slate-400 transition-colors font-normal`}
+      className={clas}
     >
       {btn}
     </button>
