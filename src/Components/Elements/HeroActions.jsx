@@ -2,7 +2,7 @@ import { Button } from "./Button";
 
 const HeroActions = () => {
   return (
-    <div className="flex items-center justify-between gap-2 mt-4 ml-8">
+    <div className="flex items-center justify-between gap-2 mt-4 ml-8 md:ml-14">
       <div className="flex gap-2">
         <Button
           clas="text-[10px] md:text-base px-3 md:w-30 bg-[#3254FF] rounded-full font-bold"
