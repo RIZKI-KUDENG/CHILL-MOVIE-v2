@@ -1,9 +1,9 @@
 import CardSliders from "../Elements/CardSliders";
-import { movieSlider } from "../../Data/MovieSlider";
+import { movieContent } from "../../Data/MovieContent";
 const Content = () => {
   return (
     <div className="flex gap-4">
-    {movieSlider.map((item) => (
+    {movieContent.map((item) => (
       <CardSliders
         key={item.id}
         title={item.title}
