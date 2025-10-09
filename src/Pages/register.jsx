@@ -1,7 +1,10 @@
 import AuthLayout from "../Components/Layouts/AuthLayout";
 import InputField from "../Components/Elements/Input";
+import { useDocumentTitle } from "../Data/useDocumentsTitle";
+
 
 const Register = () => {
+  useDocumentTitle("Register" || "Chill Movie");
   return (
     <AuthLayout
       bg="bg-[url(/src/assets/image/bgregister.jpg)]"

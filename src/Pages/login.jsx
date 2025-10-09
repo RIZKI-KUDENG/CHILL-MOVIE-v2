@@ -1,6 +1,8 @@
 import  AuthLayout  from "../Components/Layouts/AuthLayout";
 import  InputField  from "../Components/Elements/Input";
+import { useDocumentTitle } from "../Data/useDocumentsTitle";
 function Login() {
+  useDocumentTitle("Login" || "Chill Movie");
   return (
     <AuthLayout
       bg="bg-[url(/src/assets/image/bglogin.jpg)]"

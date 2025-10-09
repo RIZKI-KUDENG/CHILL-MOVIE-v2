@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const AvatarDropdown = (props) => {
   const { open, handle } = props;
   return (
@@ -37,7 +38,7 @@ const AvatarDropdown = (props) => {
               alt=""
               className="w-3 md:w-4 h-3 md:h-4"
             />
-            <a href="/src/Pages/login.jsx">Keluar</a>
+            <Link to="/login">Keluar</Link>
           </li>
         </ul>
       </div>
