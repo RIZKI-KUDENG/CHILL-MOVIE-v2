@@ -1,4 +1,5 @@
 import { useSlider } from "../../Hooks/useSlider";
+import MovieCard from "./MovieCard";
 
 const MovieSlider = (props) => {
   const { title, movies } = props;
@@ -9,24 +10,28 @@ const MovieSlider = (props) => {
         <h1 className="text-xl md:text-4xl font-bold">{title}</h1>
       </div>
       <div className="absolute bottom-50 left-0 z-10 max-md:hidden">
-        <img src="/src/assets/movieslider/leftbutton.png" alt="" onClick={() => move("kiri")} />
+        <img
+          src="/src/assets/movieslider/leftbutton.png"
+          alt=""
+          onClick={() => move("kiri")}
+        />
       </div>
-      <div className="flex flex-nowrap overflow-x-scroll md:py-4" ref={sliderref}>
-        <div className="flex gap-3">{movies.map((movie)=>{
-          return(
-            <img
-            src={movie.image}
-            alt=""
-            className="max-sm:w-35 max-sm:h-35 w-xs h-xs rounded-xl"
-            key={movie.id}
-          />
-          )
-        })}</div>
+      <div
+        className="flex flex-nowrap overflow-x-scroll gap-4 md:py-4"
+        ref={sliderref}
+      >
+        {movies.map((movie) => {
+          return <MovieCard Movie={movie} key={movie.id} />;
+        })}
       </div>
       <div className="absolute bottom-50 right-0 z-10 max-md:hidden">
-        <img src="/src/assets/movieslider/rightbutton.png" alt="" onClick={() => move("kanan")} />
+        <img
+          src="/src/assets/movieslider/rightbutton.png"
+          alt=""
+          onClick={() => move("kanan")}
+        />
       </div>
     </section>
   );
 };
- export default MovieSlider;
+export default MovieSlider;
