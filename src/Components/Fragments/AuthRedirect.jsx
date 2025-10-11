@@ -4,13 +4,13 @@ const {style,a, ask} = props
     <div className="flex justify-between items-center text-sm gap-2 sm:gap-4 mt-2">
       <p className="text-[#C1C2C4]">
         {ask}{" "}
-        <a href="#" className="font-bold text-white hover:underline">
+        <span className="font-bold text-white hover:underline">
          {a}
-        </a>
+        </span>
       </p>
-      <a href="#" className={style}>
+      <p  className={style}>
         Lupa kata sandi?
-      </a>
+      </p>
     </div>
   );
 };

@@ -1,6 +1,8 @@
 import AuthLayout from "../Components/Layouts/AuthLayout";
 import InputField from "../Components/Elements/Input";
 import { useDocumentTitle } from "../Data/useDocumentsTitle";
+import { Link } from "react-router-dom";
+
 
 
 const Register = () => {
@@ -11,9 +13,9 @@ const Register = () => {
       h3="Daftar"
       p="Selamat datang!"
       ask="Sudah punya akun?"
-      a="Login"
+      a={<Link to="/login">Masuk</Link>}
       style="hidden"
-      btn="Daftar"
+      btn={<Link to="/">Daftar</Link>}
     >
       <InputField
         name="username"

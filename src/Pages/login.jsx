@@ -1,6 +1,7 @@
 import  AuthLayout  from "../Components/Layouts/AuthLayout";
 import  InputField  from "../Components/Elements/Input";
 import { useDocumentTitle } from "../Data/useDocumentsTitle";
+import { Link} from "react-router-dom";
 function Login() {
   useDocumentTitle("Login" || "Chill Movie");
   return (
@@ -9,9 +10,9 @@ function Login() {
       h3="MASUK"
       p="Selamat Datang Kembali!"
       ask="Belum punya akun?"
-      a="Daftar"
+      a={<Link to="/register">Daftar</Link>}
       style="hoover:underline"
-      btn="MASUK"
+      btn={<Link to="/">Masuk</Link>}
     >
       <InputField
         name="username"
