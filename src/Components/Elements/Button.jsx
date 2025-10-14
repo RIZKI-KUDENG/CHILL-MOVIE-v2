@@ -1,8 +1,9 @@
 const Button = (props) => {
-  const { btn,clas } = props;
+  const { btn,clas, onClick } = props;
   return (
     <button
       className={clas}
+      onClick={onClick}
     >
       {btn}
     </button>

@@ -2,7 +2,7 @@ import { useSlider } from "../../Hooks/useSlider";
 import MovieCard from "./MovieCard";
 
 const MovieSlider = (props) => {
-  const { title, movies, enableHover } = props;
+  const { title, movies, enableHover, onCardClick } = props;
   const { sliderref, move } = useSlider();
   return (
     <section className="mx-8 md:mx-14 mt-7 relative md:py-4">
@@ -21,7 +21,7 @@ const MovieSlider = (props) => {
         ref={sliderref}
       >
         {movies.map((movie) => {
-          return <MovieCard Movie={movie} key={movie.id} enableHover={enableHover} />;
+          return <MovieCard Movie={movie} key={movie.id} enableHover={enableHover} onClick={() => onCardClick(movie)} />;
         })}
       </div>
       <div className="absolute bottom-50 right-0 z-10 max-md:hidden">
