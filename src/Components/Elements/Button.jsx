@@ -4,6 +4,7 @@ const Button = (props) => {
     <button
       className={clas}
       onClick={onClick}
+      type="submit"
     >
       {btn}
     </button>

@@ -6,7 +6,7 @@ import { Button } from "../Components/Elements/Button";
 import AddMovieModal from "../Components/Fragments/addMovieModal";
 
 const EditMovie = () => {
-  const { movies } = useMovies();
+  const { movies, addMovie } = useMovies();
   const [showModal, setShowModal] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [showAddMovie, setShowAddMovie] = useState(false);
@@ -14,6 +14,10 @@ const EditMovie = () => {
   const top = movies.filter((movie) => movie.kategori === "Top");
   const New = movies.filter((movie) => movie.kategori === "New");
   const trending = movies.filter((movie) => movie.kategori === "Trending");
+
+  const addNewMovie = () => {
+
+  }
 
   const handleAddMovie = () => {
     setShowAddMovie(true);

@@ -13,21 +13,21 @@ export const MovieModal = (props) => {
           </button>
         </div>
         <div>
-          <form action="" className="p-2">
+          <form action='' className="p-2">
             <InputField
-              name="username"
+              name="title"
               text="Edit Title"
               type="text"
               placeholder={titleEdit}
             />
             <InputField
-              name="username"
+              name="image"
               text="Edit Image"
               type="text"
               placeholder={imageEdit}
             />
             <InputField
-              name="username"
+              name="kategori"
               text="Edit Kategori"
               type="text"
               placeholder={kategoriEdit}
