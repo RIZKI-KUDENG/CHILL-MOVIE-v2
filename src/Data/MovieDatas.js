@@ -56,98 +56,101 @@ export const topMovies = [
 ];
 export const trendingMovies = [
   {
-    id: 1,
+    id: 9,
     title: "Megan",
     image: "/src/assets/movie/megan.png",
     kategori: "Trending",
   },
   {
-    id: 2,
+    id: 10,
     title: "Black Adam",
     image: "/src/assets/movie/blackadam.png",
     kategori: "Trending",
   },
   {
-    id: 3,
+    id: 11,
     title: "Don't Look Up",
     image: "/src/assets/movie/dontlookup.png",
     kategori: "Trending",
   },
   {
-    id: 4,
+    id: 12,
     title: "Jurassic World",
     image: "/src/assets/movie/jurassic.png",
     kategori: "Trending",
   },
   {
-    id: 5,
+    id: 13,
     title: "Multiverse of Madness",
     image: "/src/assets/movie/multiverse.png",
     kategori: "Tending",
   },
   {
-    id: 6,
+    id: 14,
     title: "Suzume",
     image: "/src/assets/movie/suzume.png",
     kategori: "Trending",
   },
   {
-    id: 7,
+    id: 15,
     title: "Rio",
     image: "/src/assets/movie/rio.png",
     kategori: "Trending",
-  },{
-    id: 8,
+  },
+  {
+    id: 16,
     title: "A Little Mermaid",
     image: "/src/assets/movie/mermaid.png",
     kategori: "Trending",
-  }
+  },
 ];
 export const newMovies = [
   {
-    id: 1,
+    id: 17,
     title: "Blue Lock",
     image: "/src/assets/movie/bluelock.png",
     kategori: "New",
   },
   {
-    id: 2,
+    id: 18,
     title: "Duty After School",
     image: "/src/assets/movie/dutyafter.png",
     kategori: "New",
   },
   {
-    id: 3,
+    id: 19,
     title: "Guardian of the Galaxy",
     image: "/src/assets/movie/gotg.png",
     kategori: "New",
   },
   {
-    id: 4,
+    id: 20,
     title: "My Hero Academia",
     image: "/src/assets/movie/myhero.png",
     kategori: "New",
   },
   {
-    id: 5,
+    id: 21,
     title: "Sonic 2",
     image: "/src/assets/movie/sonic.png",
     kategori: "New",
   },
   {
-    id: 6,
+    id: 22,
     title: "Ted Lasso",
     image: "/src/assets/movie/tedlasso.png",
     kategori: "New",
-  },{
-    id: 7,
+  },
+  {
+    id: 23,
     title: "The Little Mermaid",
     image: "/src/assets/movie/mermaid.png",
     kategori: "New",
-  },{
-    id: 8,
+  },
+  {
+    id: 24,
     title: "A Man Called Otto",
     image: "/src/assets/movie/otto.png",
     kategori: "New",
-  }
+  },
 ];

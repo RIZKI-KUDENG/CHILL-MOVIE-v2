@@ -11,9 +11,10 @@ const Home = () => {
       <MovieSlider
         title="Top Rating Film dan Series Hari ini"
         movies={topMovies}
+        enableHover={true}
       ></MovieSlider>
-      <MovieSlider title="Film trending" movies={newMovies}></MovieSlider>
-      <MovieSlider title="Rilis Baru" movies={trendingMovies}></MovieSlider>
+      <MovieSlider title="Film trending" movies={newMovies} enableHover={true}></MovieSlider>
+      <MovieSlider title="Rilis Baru" movies={trendingMovies} enableHover={true}></MovieSlider>
     </>
   );
 };

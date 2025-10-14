@@ -1,14 +1,17 @@
 import { useState } from "react";
-const MovieCard = ({ Movie }) => {
+const MovieCard = ({ Movie, enableHover  }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const hoverHandler = enableHover ? {
+    onMouseEnter: () => setIsHovered(true),
+      onMouseLeave:() => setIsHovered(false)
+  } : {};
   return (
     <div
       className="flex relative flex-shrink-0"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      {...hoverHandler}
     >
       <img src={Movie.image} alt={Movie.title} className={`max-sm:w-23 max-sm:h-35 w-2xs h-2xs rounded-xl hover:scale-105 transition-all ${isHovered ? "opacity-0" : "opacity-100"}`} />
-      {isHovered && (
+      { isHovered && (
         <div className="flex flex-col gap-3 absolute -left-8 top-0 z-99 bg-[#181A1C] w-md h-xl max-md:hidden">
           <div>
             <img src={Movie.image} alt={Movie.title} className="w-md h-80" />
