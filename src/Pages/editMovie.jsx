@@ -6,7 +6,7 @@ import { Button } from "../Components/Elements/Button";
 import AddMovieModal from "../Components/Fragments/addMovieModal";
 
 const EditMovie = () => {
-  const { movies, addMovie } = useMovies();
+  const { movies, addMovie, updateMovie, deleteMovie } = useMovies();
   const [showModal, setShowModal] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [showAddMovie, setShowAddMovie] = useState(false);
@@ -14,10 +14,6 @@ const EditMovie = () => {
   const top = movies.filter((movie) => movie.kategori === "Top");
   const New = movies.filter((movie) => movie.kategori === "New");
   const trending = movies.filter((movie) => movie.kategori === "Trending");
-
-  const addNewMovie = () => {
-
-  }
 
   const handleAddMovie = () => {
     setShowAddMovie(true);
@@ -61,22 +57,14 @@ const EditMovie = () => {
       {showModal && (
         <MovieModal
           onClose={handleClose}
-          titleEdit={selectedMovie.title}
-          imageEdit={selectedMovie.image}
-          kategoriEdit={selectedMovie.kategori}
+          movie={selectedMovie}
+          onUpdate={updateMovie}
+          onDelete={deleteMovie}
         >
-          <Button
-            clas="py-3 px-3 bg-red-500 cursor-pointer rounded-lg"
-            btn="Hapus Movie"
-          />
-          <Button
-            clas="py-3 px-3 bg-[#3254FF] cursor-pointer rounded-lg"
-            btn="Simpan Edit"
-          />
         </MovieModal>
       )}
       {showAddMovie && (
-        <AddMovieModal onClose={handleCloseAddMovie} onClick={handleAddMovie} />
+      <AddMovieModal onClose={handleCloseAddMovie} onInput={() => console.log("berhasil")} onAdd={addMovie} />
       )}
     </div>
   );

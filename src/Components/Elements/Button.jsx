@@ -1,10 +1,10 @@
 const Button = (props) => {
-  const { btn,clas, onClick } = props;
+  const { btn,clas, onClick, type} = props;
   return (
     <button
       className={clas}
       onClick={onClick}
-      type="submit"
+      type={type}
     >
       {btn}
     </button>

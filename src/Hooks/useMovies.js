@@ -22,5 +22,15 @@ export const useMovies = () => {
     alert(`Movie ${movieToAdd.title} berhasil ditambahkan!`);
     console.log(`Movie ${movieToAdd.title} berhasil ditambahkan!`);
   };
-  return { movies, addMovie };
+  const updateMovie = (updateMovie) => {
+    const updateMovies = movies.map( movie => {
+      return movie.id === updateMovie.id ? updateMovie : movie
+    })
+    saveMovies(updateMovies)
+  }
+  const deleteMovie = (id) => {
+    const updateMovies = movies.filter(movie => movie.id !== id)
+    saveMovies(updateMovies);
+  }
+  return { movies, addMovie, updateMovie, deleteMovie };
 };
