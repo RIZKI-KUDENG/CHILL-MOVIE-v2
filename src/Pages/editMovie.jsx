@@ -4,8 +4,11 @@ import MovieModal from "../Components/Fragments/MovieModal";
 import { useMovies } from "../Hooks/useMovies";
 import { Button } from "../Components/Elements/Button";
 import AddMovieModal from "../Components/Fragments/addMovieModal";
+import { useDocumentTitle } from "../Data/useDocumentsTitle";
+
 
 const EditMovie = () => {
+  useDocumentTitle("Edit Movie" || "Chill Movie");
   const { movies, addMovie, updateMovie, deleteMovie } = useMovies();
   const [showModal, setShowModal] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState(null);

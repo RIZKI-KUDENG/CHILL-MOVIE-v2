@@ -6,7 +6,7 @@ import Login from './Pages/login.jsx'
 import Register from './Pages/register.jsx'
 import MainLayout from './Components/Layouts/MainLayout.jsx'
 import EditMovie from './Pages/editMovie.jsx'
-import { MovieInitializer } from "./utils/MovieInitializer";
+import { MovieInitializer } from './utils/MovieInitializer.js'
 import './index.css'
 
 

@@ -1,4 +1,6 @@
 import { useRef } from "react";
+
+//fungsi untuk tombolslider
 export const useSlider = () => {
     const sliderref = useRef(null);
     const move = (arah)=> {

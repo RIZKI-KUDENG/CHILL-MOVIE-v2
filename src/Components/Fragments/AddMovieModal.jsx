@@ -31,7 +31,7 @@ const AddMovieModal = (props) => {
     <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-50">
       <div className="bg-[#181A1C] p-6 rounded-lg w-full max-w-md text-white">
         <div className="flex justify-between">
-          <h2 className=" text-2xl">Edit Movie</h2>
+          <h2 className=" text-2xl">Tambah Movie</h2>
           <button onClick={onClose} className="text-2xl cursor-pointer">
             &times;
           </button>
@@ -44,7 +44,7 @@ const AddMovieModal = (props) => {
           >
             <InputField
               name="title"
-              text="Edit Title"
+              text="Masukan Title"
               type="text"
               placeholder="Contoh: Avengers"
               value={formData.title}
@@ -52,7 +52,7 @@ const AddMovieModal = (props) => {
             />
             <InputField
               name="image"
-              text="Edit Image"
+              text="Masukan Image"
               type="text"
               placeholder="Contoh: https://..."
               value={formData.image}
@@ -60,7 +60,7 @@ const AddMovieModal = (props) => {
             />
             <InputField
               name="kategori"
-              text="Edit Kategori"
+              text="Masukan Kategori"
               type="text"
               placeholder="Top/New/Trending"
               value={formData.kategori}
